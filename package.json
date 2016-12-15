@@ -55,5 +55,9 @@
     "webpack": "^1.14.0",
     "webpack-dev-middleware": "^1.8.4",
     "webpack-hot-middleware": "^2.13.2"
+  },
+    "scripts": {
+    "start": "node devServer.js",
+    "test": "..."
   }
 }
