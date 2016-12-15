@@ -1,3 +1,4 @@
+import $ from 'jquery'
 import Balloon from './Balloon'
 import './App.sass'
 
@@ -31,6 +32,7 @@ export default class App {
   updateScore(poppedBalloon) {
     const points = 100 - poppedBalloon.props.width
     this.props.score += points
+    $('.counter').html(this.props.score);
   }
 
   removeBalloon(index) {

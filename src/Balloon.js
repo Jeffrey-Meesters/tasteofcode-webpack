@@ -54,13 +54,6 @@ export default class Balloon {
     return this
   }
 
-  pop() {
-    const { index } = this.props
-    PopSound.play()
-    this.unmount()
-    this.props.onPop(index)
-  }
-
   update(newProps) {
     this.props = Object.assign({}, this.props, newProps)
     this.domNode = this.render()
@@ -91,12 +84,6 @@ export default class Balloon {
   setColor() {
     this.props.color = Balloon.colors[Math.floor(Math.random() * Balloon.colors.length)]
     return this.props.color
-  }
-
-  pop() {
-    const { index } = this.props
-    this.unmount()
-    this.props.onPop(index)
   }
 
   pop() {
