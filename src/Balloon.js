@@ -99,6 +99,13 @@ export default class Balloon {
     this.props.onPop(index)
   }
 
+  pop() {
+    const { index } = this.props
+    PopSound.play()
+    this.unmount()
+    this.props.onPop(index)
+  }
+
   render() {
     const { color, height, width } = this.props
 
